@@ -1,24 +1,1242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aos-0J-u1i">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Starjedi.ttf">
+            <string>StarJedi</string>
+        </array>
+        <array key="Starjout.ttf">
+            <string>StarJediOutline</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Select PersonVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SelectPersonVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space1" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-lW-yak">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Trivia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YMi-T6-zny">
+                                <rect key="frame" x="20" y="108" width="374" height="58.5"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXY-65-TZv" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="320.5" width="374" height="255"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lB6-Aa-Taa">
+                                        <rect key="frame" x="20" y="20" width="334" height="215"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wke-wL-pvQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-dj-EOb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="65"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="VO0-5r-BTV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNT-Ij-6n7">
+                                                        <rect key="frame" x="71" y="0.0" width="13.5" height="65"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CBN-d0-CkP">
+                                                <rect key="frame" x="0.0" y="75" width="98" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-SK-Zng">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="69.5" id="fQU-Qm-Jec"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="box-Kc-Jc7">
+                                                        <rect key="frame" x="84.5" y="0.0" width="13.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Se5-He-rGi">
+                                                <rect key="frame" x="0.0" y="105" width="80" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mass:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh2-j6-CCg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="51.5" id="uud-Fs-dlX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psa-Q4-8cf">
+                                                        <rect key="frame" x="66.5" y="0.0" width="13.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SXe-MK-CMe">
+                                                <rect key="frame" x="0.0" y="135" width="76.5" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hair:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOj-QZ-XCe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="48" id="A7a-Mm-HE7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkb-MY-M5B">
+                                                        <rect key="frame" x="63" y="0.0" width="13.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-fP-ZrI">
+                                                <rect key="frame" x="0.0" y="165" width="146" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Birth year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-oV-BSm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="117.5" id="61v-AJ-gHE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YX-RF-Wb8">
+                                                        <rect key="frame" x="132.5" y="0.0" width="13.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lH5-2O-hMk">
+                                                <rect key="frame" x="0.0" y="195" width="108" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbD-7f-dUk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="79.5" id="PjL-K4-pMS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFl-Ex-RyC">
+                                                        <rect key="frame" x="94.5" y="0.0" width="13.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lB6-Aa-Taa" secondAttribute="trailing" constant="20" id="7ge-oW-Nym"/>
+                                    <constraint firstAttribute="height" constant="255" id="Tf7-lp-vD3"/>
+                                    <constraint firstItem="lB6-Aa-Taa" firstAttribute="leading" secondItem="JXY-65-TZv" secondAttribute="leading" constant="20" id="pnC-nw-Wyf"/>
+                                    <constraint firstAttribute="bottom" secondItem="lB6-Aa-Taa" secondAttribute="bottom" constant="20" id="rmS-ct-ONr"/>
+                                    <constraint firstItem="lB6-Aa-Taa" firstAttribute="top" secondItem="JXY-65-TZv" secondAttribute="top" constant="20" id="x4u-Up-AQP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixU-ES-FJc" customClass="BlackBgButton" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="102" y="807" width="210" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="jYb-GI-ugZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="19"/>
+                                <state key="normal" title="$ Random #">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bsH-fC-E30"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbK-ax-wll" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="589.5" width="374" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="SdK-QR-ank">
+                                        <rect key="frame" x="20" y="20" width="334" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngZ-nf-Wqo" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="OFv-Jc-VxN"/>
+                                                    <constraint firstAttribute="height" constant="35" id="YQd-Nl-rcE"/>
+                                                </constraints>
+                                                <state key="normal" image="homeworld_icon"/>
+                                                <connections>
+                                                    <segue destination="tmA-JS-hZ9" kind="show" identifier="toHomeworld" id="LvV-Uc-9NH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQL-6h-NA2" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="99.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="fz9-7F-GQc"/>
+                                                    <constraint firstAttribute="height" constant="35" id="xGZ-uZ-mkT"/>
+                                                </constraints>
+                                                <state key="normal" image="vehicles"/>
+                                                <connections>
+                                                    <segue destination="emP-UL-Cev" kind="show" identifier="toVehicles" id="EHy-X8-sGK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuU-Oz-J0m" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="199.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="CDh-bY-VYu"/>
+                                                    <constraint firstAttribute="height" constant="35" id="aCu-He-prI"/>
+                                                </constraints>
+                                                <state key="normal" image="starships"/>
+                                                <connections>
+                                                    <segue destination="dm2-Kh-Mk1" kind="show" identifier="toStarships" id="Udn-3I-8iP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWu-eM-Vll" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="299" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="HAd-gR-XSb"/>
+                                                    <constraint firstAttribute="width" constant="35" id="iKL-ff-dZs"/>
+                                                </constraints>
+                                                <state key="normal" image="films"/>
+                                                <connections>
+                                                    <segue destination="oEZ-Hg-rBy" kind="show" identifier="toFilms" id="L51-Re-NBN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SdK-QR-ank" firstAttribute="leading" secondItem="zbK-ax-wll" secondAttribute="leading" constant="20" id="esi-2f-ouY"/>
+                                    <constraint firstAttribute="height" constant="75" id="fE1-7f-F5x"/>
+                                    <constraint firstItem="SdK-QR-ank" firstAttribute="centerY" secondItem="zbK-ax-wll" secondAttribute="centerY" id="gmb-W4-eY6"/>
+                                    <constraint firstAttribute="trailing" secondItem="SdK-QR-ank" secondAttribute="trailing" constant="20" id="lt6-mn-xum"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="afx-dH-rm5">
+                                <rect key="frame" x="188.5" y="750" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="afx-dH-rm5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4VD-QC-vg0"/>
+                            <constraint firstItem="YMi-T6-zny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9yF-y0-9pr"/>
+                            <constraint firstItem="ITT-lW-yak" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AKW-bV-iIp"/>
+                            <constraint firstItem="zbK-ax-wll" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C2d-5i-b87"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ixU-ES-FJc" secondAttribute="bottom" constant="20" id="VzW-xR-Ria"/>
+                            <constraint firstItem="zbK-ax-wll" firstAttribute="top" secondItem="JXY-65-TZv" secondAttribute="bottom" constant="14" id="Xbs-R7-ad4"/>
+                            <constraint firstAttribute="bottom" secondItem="ITT-lW-yak" secondAttribute="bottom" id="cVZ-tF-6nx"/>
+                            <constraint firstItem="JXY-65-TZv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cow-Rp-HNa"/>
+                            <constraint firstItem="ixU-ES-FJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g4d-Rp-sYy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JXY-65-TZv" secondAttribute="trailing" constant="20" id="i53-UP-ST4"/>
+                            <constraint firstItem="JXY-65-TZv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jXn-EW-fW4"/>
+                            <constraint firstItem="ixU-ES-FJc" firstAttribute="top" secondItem="afx-dH-rm5" secondAttribute="bottom" constant="20" id="js7-B3-JGu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ITT-lW-yak" secondAttribute="trailing" id="m0g-4N-wVC"/>
+                            <constraint firstItem="ITT-lW-yak" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qA2-XN-zs6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YMi-T6-zny" secondAttribute="trailing" constant="20" id="vcO-7Y-onf"/>
+                            <constraint firstItem="zbK-ax-wll" firstAttribute="width" secondItem="JXY-65-TZv" secondAttribute="width" id="x5S-29-8Tg"/>
+                            <constraint firstItem="YMi-T6-zny" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xyz-YZ-okZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oHg-Qw-Kjz"/>
+                    <connections>
+                        <outlet property="birthYearLbl" destination="9YX-RF-Wb8" id="3xM-dd-gv6"/>
+                        <outlet property="filmsBtn" destination="mWu-eM-Vll" id="Yxt-i3-E6C"/>
+                        <outlet property="genderLbl" destination="kFl-Ex-RyC" id="su5-Dc-lAi"/>
+                        <outlet property="hairLbl" destination="kkb-MY-M5B" id="0Kl-pj-mpw"/>
+                        <outlet property="heightLbl" destination="box-Kc-Jc7" id="ThS-l8-RRQ"/>
+                        <outlet property="homeworldBtn" destination="ngZ-nf-Wqo" id="8Xj-I5-MWE"/>
+                        <outlet property="massLbl" destination="psa-Q4-8cf" id="sdk-rr-2qw"/>
+                        <outlet property="nameLbl" destination="xNT-Ij-6n7" id="A1K-YJ-PRa"/>
+                        <outlet property="spinner" destination="afx-dH-rm5" id="MzL-yY-eaH"/>
+                        <outlet property="starshipsBtn" destination="RuU-Oz-J0m" id="a8Z-JW-Vxr"/>
+                        <outlet property="vehiclesBtn" destination="GQL-6h-NA2" id="8MC-y8-diT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--HomeworldVC-->
+        <scene sceneID="ch9-Rr-CbF">
+            <objects>
+                <viewController id="tmA-JS-hZ9" customClass="HomeworldVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0C8-SZ-i0a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeworld" translatesAutoresizingMaskIntoConstraints="NO" id="kHU-Mk-LTF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homeworld" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dnr-5N-O2F">
+                                <rect key="frame" x="20" y="108" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ds-O4-MU7" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="355" width="374" height="186"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="afo-te-32t">
+                                        <rect key="frame" x="20" y="20" width="334" height="146"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HPV-se-OlH">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQT-jZ-EMm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="VYY-Ud-qIY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwZ-yg-X5E">
+                                                        <rect key="frame" x="71" y="0.0" width="263" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-7m-omN">
+                                                <rect key="frame" x="0.0" y="39.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="climate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-WR-nsM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="83" id="s5e-c5-n19"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVV-Ww-AuG">
+                                                        <rect key="frame" x="98" y="0.0" width="236" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GAR-s9-0Jx">
+                                                <rect key="frame" x="0.0" y="79" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terrain:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-pR-lZ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="81.5" id="dBf-DT-Owg"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RRT-i1-cuM">
+                                                        <rect key="frame" x="96.5" y="0.0" width="237.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DdQ-Yq-fYA">
+                                                <rect key="frame" x="0.0" y="118.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksx-dF-oEJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="122.5" id="NbG-A6-oIr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYh-0K-Cmd">
+                                                        <rect key="frame" x="137.5" y="0.0" width="196.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="afo-te-32t" firstAttribute="centerY" secondItem="4Ds-O4-MU7" secondAttribute="centerY" id="6As-sW-Vh8"/>
+                                    <constraint firstAttribute="trailing" secondItem="afo-te-32t" secondAttribute="trailing" constant="20" id="JXk-s2-maf"/>
+                                    <constraint firstAttribute="height" constant="186" id="elg-IS-Wzr"/>
+                                    <constraint firstItem="afo-te-32t" firstAttribute="leading" secondItem="4Ds-O4-MU7" secondAttribute="leading" constant="20" id="iTe-7S-ilu"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-ic-kHb">
+                                <rect key="frame" x="188.5" y="785" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dnr-5N-O2F" firstAttribute="leading" secondItem="TGu-yx-tmm" secondAttribute="leading" constant="20" id="2IC-eI-Fii"/>
+                            <constraint firstItem="kHU-Mk-LTF" firstAttribute="leading" secondItem="0C8-SZ-i0a" secondAttribute="leading" id="4DG-St-H13"/>
+                            <constraint firstItem="TGu-yx-tmm" firstAttribute="bottom" secondItem="JsI-ic-kHb" secondAttribute="bottom" constant="40" id="4xl-si-aaG"/>
+                            <constraint firstItem="4Ds-O4-MU7" firstAttribute="centerY" secondItem="0C8-SZ-i0a" secondAttribute="centerY" id="5EQ-f3-fGE"/>
+                            <constraint firstItem="Dnr-5N-O2F" firstAttribute="top" secondItem="TGu-yx-tmm" secondAttribute="top" constant="20" id="GrN-ku-xMn"/>
+                            <constraint firstItem="4Ds-O4-MU7" firstAttribute="leading" secondItem="TGu-yx-tmm" secondAttribute="leading" constant="20" id="Zlg-73-ld1"/>
+                            <constraint firstItem="TGu-yx-tmm" firstAttribute="trailing" secondItem="4Ds-O4-MU7" secondAttribute="trailing" constant="20" id="ekZ-ds-WP2"/>
+                            <constraint firstItem="JsI-ic-kHb" firstAttribute="centerX" secondItem="0C8-SZ-i0a" secondAttribute="centerX" id="i1y-J4-U0c"/>
+                            <constraint firstItem="kHU-Mk-LTF" firstAttribute="top" secondItem="0C8-SZ-i0a" secondAttribute="top" id="kbg-JU-nHp"/>
+                            <constraint firstAttribute="bottom" secondItem="kHU-Mk-LTF" secondAttribute="bottom" id="rgk-gq-Qqy"/>
+                            <constraint firstItem="TGu-yx-tmm" firstAttribute="trailing" secondItem="Dnr-5N-O2F" secondAttribute="trailing" constant="20" id="suy-Uq-9fT"/>
+                            <constraint firstItem="kHU-Mk-LTF" firstAttribute="trailing" secondItem="TGu-yx-tmm" secondAttribute="trailing" id="uzP-Sh-WG4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TGu-yx-tmm"/>
+                    </view>
+                    <connections>
+                        <outlet property="climateLbl" destination="CVV-Ww-AuG" id="ihQ-hq-Dls"/>
+                        <outlet property="nameLbl" destination="dwZ-yg-X5E" id="X3j-yQ-u2G"/>
+                        <outlet property="populationLbl" destination="dYh-0K-Cmd" id="t5z-mS-zgN"/>
+                        <outlet property="spinner" destination="JsI-ic-kHb" id="Hc2-XA-o9r"/>
+                        <outlet property="terrainLbl" destination="RRT-i1-cuM" id="XXC-8h-ZdF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ix-vv-QPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="-415"/>
+        </scene>
+        <!--FilmsVC-->
+        <scene sceneID="gUQ-Pk-2NF">
+            <objects>
+                <viewController id="oEZ-Hg-rBy" customClass="FilmsVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PGB-Q0-0l8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space2" translatesAutoresizingMaskIntoConstraints="NO" id="bip-xf-fcn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="films" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5pS-FC-nMu">
+                                <rect key="frame" x="20" y="108" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGo-he-IUt" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="228" width="374" height="584"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Olp-sA-loe">
+                                        <rect key="frame" x="20" y="20" width="334" height="221.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TrQ-9D-NYS">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyc-xq-V7g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="iwv-L1-wRP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i94-c8-Od3">
+                                                        <rect key="frame" x="71" y="0.0" width="263" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-h0-haP">
+                                                <rect key="frame" x="0.0" y="48.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="episode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBk-9Y-Bca">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="83.5" id="1GA-AH-gRl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv0-sP-lcS">
+                                                        <rect key="frame" x="98.5" y="0.0" width="235.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nSM-aO-oFE">
+                                                <rect key="frame" x="0.0" y="97" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="director:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jH3-eD-rw0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="99.5" id="wtn-VP-jaH"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq1-fu-WUD">
+                                                        <rect key="frame" x="114.5" y="0.0" width="219.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Jde-4X-BDc">
+                                                <rect key="frame" x="0.0" y="145.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="producer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-md-9Oo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="108" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="108" id="wvz-CD-2MK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mZf-03-8dP">
+                                                        <rect key="frame" x="123" y="0.0" width="211" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VCb-nn-gfk">
+                                                <rect key="frame" x="0.0" y="194" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="released:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-tg-5qJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Zjl-ij-h63"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AK6-6R-Ae5">
+                                                        <rect key="frame" x="115" y="0.0" width="219" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O0-p0-KEX">
+                                        <rect key="frame" x="20" y="261.5" width="334" height="302.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Olp-sA-loe" firstAttribute="top" secondItem="pGo-he-IUt" secondAttribute="top" constant="20" id="9w8-hm-EvB"/>
+                                    <constraint firstAttribute="trailing" secondItem="3O0-p0-KEX" secondAttribute="trailing" constant="20" id="b6S-MZ-Vcy"/>
+                                    <constraint firstItem="3O0-p0-KEX" firstAttribute="top" secondItem="Olp-sA-loe" secondAttribute="bottom" constant="20" id="cZs-lj-t5h"/>
+                                    <constraint firstAttribute="trailing" secondItem="Olp-sA-loe" secondAttribute="trailing" constant="20" id="e2u-ZN-ZG9"/>
+                                    <constraint firstItem="3O0-p0-KEX" firstAttribute="leading" secondItem="pGo-he-IUt" secondAttribute="leading" constant="20" id="j5D-Bx-A1k"/>
+                                    <constraint firstAttribute="bottom" secondItem="3O0-p0-KEX" secondAttribute="bottom" constant="20" id="pYb-k1-cKb"/>
+                                    <constraint firstItem="Olp-sA-loe" firstAttribute="leading" secondItem="pGo-he-IUt" secondAttribute="leading" constant="20" id="xml-d6-MC6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpg-nY-jWp" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="832" width="107" height="44"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousClicked:" destination="oEZ-Hg-rBy" eventType="touchUpInside" id="ZE3-C4-W0y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkp-NT-qFN" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="339" y="832" width="55" height="44"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextClicked:" destination="oEZ-Hg-rBy" eventType="touchUpInside" id="sML-lh-0BF"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TJM-aw-nEU">
+                                <rect key="frame" x="188.5" y="815" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Lpg-nY-jWp" secondAttribute="bottom" constant="20" id="0uC-ko-O2Q"/>
+                            <constraint firstItem="Lpg-nY-jWp" firstAttribute="leading" secondItem="Wg8-NQ-08o" secondAttribute="leading" constant="20" id="8co-cn-SKa"/>
+                            <constraint firstItem="bip-xf-fcn" firstAttribute="top" secondItem="PGB-Q0-0l8" secondAttribute="top" id="CbT-cp-2cA"/>
+                            <constraint firstItem="bip-xf-fcn" firstAttribute="leading" secondItem="Wg8-NQ-08o" secondAttribute="leading" id="E8g-V3-YAt"/>
+                            <constraint firstAttribute="bottom" secondItem="Xkp-NT-qFN" secondAttribute="bottom" constant="20" id="G3T-uW-3P1"/>
+                            <constraint firstItem="Wg8-NQ-08o" firstAttribute="trailing" secondItem="Xkp-NT-qFN" secondAttribute="trailing" constant="20" id="ISr-Sw-rPk"/>
+                            <constraint firstItem="Lpg-nY-jWp" firstAttribute="top" secondItem="pGo-he-IUt" secondAttribute="bottom" constant="20" id="SF3-uP-kUh"/>
+                            <constraint firstItem="pGo-he-IUt" firstAttribute="leading" secondItem="Wg8-NQ-08o" secondAttribute="leading" constant="20" id="U19-D8-e63"/>
+                            <constraint firstAttribute="bottom" secondItem="bip-xf-fcn" secondAttribute="bottom" id="WGR-w9-DL1"/>
+                            <constraint firstItem="Wg8-NQ-08o" firstAttribute="trailing" secondItem="pGo-he-IUt" secondAttribute="trailing" constant="20" id="YV4-B2-38j"/>
+                            <constraint firstItem="TJM-aw-nEU" firstAttribute="centerX" secondItem="PGB-Q0-0l8" secondAttribute="centerX" id="aC2-ve-Kvk"/>
+                            <constraint firstItem="pGo-he-IUt" firstAttribute="top" secondItem="5pS-FC-nMu" secondAttribute="bottom" constant="40" id="aqI-9l-Arz"/>
+                            <constraint firstItem="5pS-FC-nMu" firstAttribute="leading" secondItem="Wg8-NQ-08o" secondAttribute="leading" constant="20" id="b3S-kc-87U"/>
+                            <constraint firstItem="Wg8-NQ-08o" firstAttribute="trailing" secondItem="bip-xf-fcn" secondAttribute="trailing" id="jqc-Dg-by0"/>
+                            <constraint firstItem="5pS-FC-nMu" firstAttribute="top" secondItem="Wg8-NQ-08o" secondAttribute="top" constant="20" id="kfW-2k-PRH"/>
+                            <constraint firstItem="Wg8-NQ-08o" firstAttribute="bottom" secondItem="TJM-aw-nEU" secondAttribute="bottom" constant="10" id="qel-4R-saE"/>
+                            <constraint firstItem="Wg8-NQ-08o" firstAttribute="trailing" secondItem="5pS-FC-nMu" secondAttribute="trailing" constant="20" id="wVx-QE-0Af"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wg8-NQ-08o"/>
+                    </view>
+                    <connections>
+                        <outlet property="crawlLbl" destination="3O0-p0-KEX" id="cvJ-rd-biQ"/>
+                        <outlet property="directorLbl" destination="sq1-fu-WUD" id="DYq-Ar-cbh"/>
+                        <outlet property="episodeLbl" destination="kv0-sP-lcS" id="YQx-Zz-aW9"/>
+                        <outlet property="nextBtn" destination="Xkp-NT-qFN" id="YiL-9o-BTi"/>
+                        <outlet property="previousBtn" destination="Lpg-nY-jWp" id="mJ3-th-M8l"/>
+                        <outlet property="producerLbl" destination="mZf-03-8dP" id="M3h-nR-qZF"/>
+                        <outlet property="releasedLbl" destination="AK6-6R-Ae5" id="LKA-RJ-juS"/>
+                        <outlet property="spinner" destination="TJM-aw-nEU" id="jQH-Di-xZf"/>
+                        <outlet property="titleLbl" destination="i94-c8-Od3" id="tYl-S7-GDI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7h-Vf-msI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2848" y="914"/>
+        </scene>
+        <!--VehiclesVC-->
+        <scene sceneID="lZs-SN-MOF">
+            <objects>
+                <viewController id="emP-UL-Cev" customClass="VehiclesVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XM8-Xl-2wZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space3" translatesAutoresizingMaskIntoConstraints="NO" id="avr-x5-32I">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vehicles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NFd-fK-fvF">
+                                <rect key="frame" x="20" y="108" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPY-au-bI2" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="276" width="374" height="344"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="B1u-Kf-Ha3">
+                                        <rect key="frame" x="20" y="20" width="334" height="304"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wAU-fi-svQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mi-q7-MKe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="Tw4-mN-pVe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-z7-0gv">
+                                                        <rect key="frame" x="71" y="0.0" width="263" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gdG-xI-DnD">
+                                                <rect key="frame" x="0.0" y="39.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="model:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrg-ZO-NL9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="83" id="nzo-2N-2OY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L0-bm-WVZ">
+                                                        <rect key="frame" x="98" y="0.0" width="236" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JYh-rP-2xU">
+                                                <rect key="frame" x="0.0" y="79" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maker:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ama-4N-j8H">
+                                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="68.5" id="thc-O7-cAd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T6T-M6-Re5">
+                                                        <rect key="frame" x="83.5" y="0.0" width="250.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NL7-nk-2o7">
+                                                <rect key="frame" x="0.0" y="118.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuN-nK-DbP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="53.5" id="dHP-3Q-LB5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpG-1q-9rz">
+                                                        <rect key="frame" x="68.5" y="0.0" width="265.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="W0r-I6-A4B">
+                                                <rect key="frame" x="0.0" y="158" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asl-9C-sRi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="76" id="M7S-3q-Izj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1R-Dr-ZDP">
+                                                        <rect key="frame" x="91" y="0.0" width="243" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vDf-q3-ajV">
+                                                <rect key="frame" x="0.0" y="197.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V04-ut-NWd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="65" id="XY7-Sw-3yv"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etU-r9-Vw2">
+                                                        <rect key="frame" x="80" y="0.0" width="254" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UY8-tr-8uq">
+                                                <rect key="frame" x="0.0" y="237" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="crew:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPP-qk-NPi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="58" id="0Aq-e5-UXa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueV-Jh-JHl">
+                                                        <rect key="frame" x="73" y="0.0" width="261" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KO3-Af-rCz">
+                                                <rect key="frame" x="0.0" y="276.5" width="334" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="passengers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X3-Ys-OdZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="119.5" id="lz9-dM-Smc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL7-Eo-Zmk">
+                                                        <rect key="frame" x="134.5" y="0.0" width="199.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="B1u-Kf-Ha3" secondAttribute="trailing" constant="20" id="GRK-ER-lpD"/>
+                                    <constraint firstAttribute="height" constant="344" id="R0r-ge-8zk"/>
+                                    <constraint firstItem="B1u-Kf-Ha3" firstAttribute="top" secondItem="YPY-au-bI2" secondAttribute="top" constant="20" id="SgG-K5-Ubu"/>
+                                    <constraint firstAttribute="bottom" secondItem="B1u-Kf-Ha3" secondAttribute="bottom" constant="20" id="Wjz-yD-VPS"/>
+                                    <constraint firstItem="B1u-Kf-Ha3" firstAttribute="leading" secondItem="YPY-au-bI2" secondAttribute="leading" constant="20" id="vbu-ct-xqR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4al-E6-mbF" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="832" width="107" height="44"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="previous">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousClicked:" destination="emP-UL-Cev" eventType="touchUpInside" id="wsF-tn-Z3E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yec-WZ-gur" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="339" y="832" width="55" height="44"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextClicked:" destination="emP-UL-Cev" eventType="touchUpInside" id="k6n-nF-GgY"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-T4-hsY">
+                                <rect key="frame" x="188.5" y="785" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NFd-fK-fvF" firstAttribute="top" secondItem="gIW-hc-E9g" secondAttribute="top" constant="20" id="04r-2f-jhy"/>
+                            <constraint firstItem="gIW-hc-E9g" firstAttribute="trailing" secondItem="YPY-au-bI2" secondAttribute="trailing" constant="20" id="4zu-em-a4u"/>
+                            <constraint firstItem="NFd-fK-fvF" firstAttribute="leading" secondItem="gIW-hc-E9g" secondAttribute="leading" constant="20" id="Aqr-Bp-4zP"/>
+                            <constraint firstItem="gIW-hc-E9g" firstAttribute="trailing" secondItem="NFd-fK-fvF" secondAttribute="trailing" constant="20" id="GS7-aw-OH4"/>
+                            <constraint firstItem="gIW-hc-E9g" firstAttribute="trailing" secondItem="yec-WZ-gur" secondAttribute="trailing" constant="20" id="OXh-zn-Ion"/>
+                            <constraint firstAttribute="bottom" secondItem="4al-E6-mbF" secondAttribute="bottom" constant="20" id="SfE-gd-bK0"/>
+                            <constraint firstItem="avr-x5-32I" firstAttribute="top" secondItem="XM8-Xl-2wZ" secondAttribute="top" id="WU2-A1-bzC"/>
+                            <constraint firstAttribute="bottom" secondItem="yec-WZ-gur" secondAttribute="bottom" constant="20" id="Xtd-Jy-2kk"/>
+                            <constraint firstItem="avr-x5-32I" firstAttribute="leading" secondItem="gIW-hc-E9g" secondAttribute="leading" id="c0H-v6-VGf"/>
+                            <constraint firstItem="YPY-au-bI2" firstAttribute="leading" secondItem="gIW-hc-E9g" secondAttribute="leading" constant="20" id="eBh-fc-Nr4"/>
+                            <constraint firstItem="gIW-hc-E9g" firstAttribute="trailing" secondItem="avr-x5-32I" secondAttribute="trailing" id="eTK-5x-9o1"/>
+                            <constraint firstItem="qOo-T4-hsY" firstAttribute="centerX" secondItem="XM8-Xl-2wZ" secondAttribute="centerX" id="fPl-c2-aas"/>
+                            <constraint firstAttribute="bottom" secondItem="avr-x5-32I" secondAttribute="bottom" id="hpW-OP-FqZ"/>
+                            <constraint firstItem="gIW-hc-E9g" firstAttribute="bottom" secondItem="qOo-T4-hsY" secondAttribute="bottom" constant="40" id="hqT-RQ-8jx"/>
+                            <constraint firstItem="YPY-au-bI2" firstAttribute="centerY" secondItem="XM8-Xl-2wZ" secondAttribute="centerY" id="tr2-L4-Dv2"/>
+                            <constraint firstItem="4al-E6-mbF" firstAttribute="leading" secondItem="gIW-hc-E9g" secondAttribute="leading" constant="20" id="wO8-34-nR7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gIW-hc-E9g"/>
+                    </view>
+                    <connections>
+                        <outlet property="costLbl" destination="NpG-1q-9rz" id="knJ-ID-9wY"/>
+                        <outlet property="crewLbl" destination="ueV-Jh-JHl" id="EbB-RJ-vf2"/>
+                        <outlet property="lengthLbl" destination="B1R-Dr-ZDP" id="A6M-ad-e8H"/>
+                        <outlet property="makerLbl" destination="T6T-M6-Re5" id="amG-da-Snh"/>
+                        <outlet property="modelLbl" destination="8L0-bm-WVZ" id="cpV-cl-jWf"/>
+                        <outlet property="nameLbl" destination="zmE-z7-0gv" id="chn-ug-DWs"/>
+                        <outlet property="nextBtn" destination="yec-WZ-gur" id="sL4-uB-QSn"/>
+                        <outlet property="previousBtn" destination="4al-E6-mbF" id="0d7-DL-F97"/>
+                        <outlet property="pxLbl" destination="eL7-Eo-Zmk" id="YvO-8a-F46"/>
+                        <outlet property="speedLbl" destination="etU-r9-Vw2" id="gwU-RY-Nxe"/>
+                        <outlet property="spinner" destination="qOo-T4-hsY" id="mJj-nJ-4W7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hE-4j-9uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2848" y="-415"/>
+        </scene>
+        <!--StarshipsVC-->
+        <scene sceneID="Zrf-mk-ciX">
+            <objects>
+                <viewController id="dm2-Kh-Mk1" customClass="StarshipsVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwr-i6-c6R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space4" translatesAutoresizingMaskIntoConstraints="NO" id="UEL-6B-tnM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="starships" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YbQ-s8-Zhf">
+                                <rect key="frame" x="20" y="108" width="374" height="58.5"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oY2-lW-diT" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="236.5" width="374" height="423"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="uGk-n7-eJn">
+                                        <rect key="frame" x="20" y="20" width="334" height="308"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j9W-sE-Rnu">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jM-Ey-SSl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="0xE-ge-ouQ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R8W-zc-7b4">
+                                                        <rect key="frame" x="71" y="0.0" width="263" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-uE-cr8">
+                                                <rect key="frame" x="0.0" y="32" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="model:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvC-pn-Acg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="83" id="rto-nf-dWy"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="d6O-fK-z5D">
+                                                        <rect key="frame" x="98" y="0.0" width="236" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RWs-Kd-grs">
+                                                <rect key="frame" x="0.0" y="64" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maker:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jof-Py-XrZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="68.5" id="K98-54-oUo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mQP-k0-iEA">
+                                                        <rect key="frame" x="83.5" y="0.0" width="250.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KHO-OI-rLn">
+                                                <rect key="frame" x="0.0" y="96" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRq-fs-vUQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="53.5" id="sqo-Uj-mSg"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nt-Ma-mK2">
+                                                        <rect key="frame" x="68.5" y="0.0" width="265.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Zb8-sn-hpB">
+                                                <rect key="frame" x="0.0" y="128" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDc-K3-faV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="76" id="1fm-qc-9VM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb2-je-TZS">
+                                                        <rect key="frame" x="91" y="0.0" width="243" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4hi-Lg-h51">
+                                                <rect key="frame" x="0.0" y="160" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn3-da-Al1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="65" id="aQM-46-1O4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBf-FA-xBX">
+                                                        <rect key="frame" x="80" y="0.0" width="254" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RD0-gf-e6o">
+                                                <rect key="frame" x="0.0" y="192" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="crew:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gG-MU-qRI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="58" id="2Nk-gY-CWc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25d-Fm-bF4">
+                                                        <rect key="frame" x="73" y="0.0" width="261" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-e3-eSo">
+                                                <rect key="frame" x="0.0" y="224" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="passengers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DN-Lg-5QX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="119.5" id="zGK-mt-ngz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qo-O9-kLQ">
+                                                        <rect key="frame" x="134.5" y="0.0" width="199.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RDP-NN-oaU">
+                                                <rect key="frame" x="0.0" y="256" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="capacity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4d-Ke-4r4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="97" id="Qp1-k3-lsM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bm-lf-q0k">
+                                                        <rect key="frame" x="112" y="0.0" width="222" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jOf-IQ-Ggq">
+                                                <rect key="frame" x="0.0" y="288" width="334" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3W-GJ-7ZN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="72" id="UWn-zc-wqV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9M-Y8-NMF">
+                                                        <rect key="frame" x="87" y="0.0" width="247" height="20"/>
+                                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uGk-n7-eJn" firstAttribute="centerX" secondItem="oY2-lW-diT" secondAttribute="centerX" id="384-a5-Dpq"/>
+                                    <constraint firstItem="uGk-n7-eJn" firstAttribute="leading" secondItem="oY2-lW-diT" secondAttribute="leading" constant="20" id="3Um-LF-D6q"/>
+                                    <constraint firstAttribute="height" constant="423" id="EpB-nU-D8W"/>
+                                    <constraint firstItem="uGk-n7-eJn" firstAttribute="top" secondItem="oY2-lW-diT" secondAttribute="top" constant="20" id="eSo-Ad-YZ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="uGk-n7-eJn" secondAttribute="trailing" constant="20" id="vsL-kY-Laj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Ax-R8v" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="840" width="78" height="36"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousClicked:" destination="dm2-Kh-Mk1" eventType="touchUpInside" id="d9f-Wc-H3S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maf-Ds-sPH" customClass="FadeEnableBtn" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="352" y="840" width="42" height="36"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextClicked:" destination="dm2-Kh-Mk1" eventType="touchUpInside" id="PiG-vZ-Z8s"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Fhq-kg-jHI">
+                                <rect key="frame" x="188.5" y="785" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UEL-6B-tnM" firstAttribute="top" secondItem="nwr-i6-c6R" secondAttribute="top" id="6eM-Rq-b46"/>
+                            <constraint firstItem="JHd-Ax-R8v" firstAttribute="leading" secondItem="Teh-ME-xaQ" secondAttribute="leading" constant="20" id="6pT-lT-w2c"/>
+                            <constraint firstItem="Teh-ME-xaQ" firstAttribute="trailing" secondItem="YbQ-s8-Zhf" secondAttribute="trailing" constant="20" id="7bF-2V-pNU"/>
+                            <constraint firstItem="YbQ-s8-Zhf" firstAttribute="leading" secondItem="Teh-ME-xaQ" secondAttribute="leading" constant="20" id="FX6-Ng-IbM"/>
+                            <constraint firstItem="YbQ-s8-Zhf" firstAttribute="top" secondItem="Teh-ME-xaQ" secondAttribute="top" constant="20" id="G41-mT-S9q"/>
+                            <constraint firstAttribute="bottom" secondItem="maf-Ds-sPH" secondAttribute="bottom" constant="20" id="HSq-6w-qgp"/>
+                            <constraint firstItem="oY2-lW-diT" firstAttribute="centerY" secondItem="nwr-i6-c6R" secondAttribute="centerY" id="R4M-T3-AcH"/>
+                            <constraint firstItem="Teh-ME-xaQ" firstAttribute="trailing" secondItem="oY2-lW-diT" secondAttribute="trailing" constant="20" id="XrT-z3-lRd"/>
+                            <constraint firstItem="Teh-ME-xaQ" firstAttribute="trailing" secondItem="UEL-6B-tnM" secondAttribute="trailing" id="YVI-qG-e1Z"/>
+                            <constraint firstItem="Teh-ME-xaQ" firstAttribute="bottom" secondItem="Fhq-kg-jHI" secondAttribute="bottom" constant="40" id="d9T-sa-6un"/>
+                            <constraint firstItem="oY2-lW-diT" firstAttribute="leading" secondItem="Teh-ME-xaQ" secondAttribute="leading" constant="20" id="ddw-CW-rrV"/>
+                            <constraint firstAttribute="bottom" secondItem="JHd-Ax-R8v" secondAttribute="bottom" constant="20" id="eX7-Hb-zUb"/>
+                            <constraint firstItem="Teh-ME-xaQ" firstAttribute="trailing" secondItem="maf-Ds-sPH" secondAttribute="trailing" constant="20" id="ekR-mE-z2w"/>
+                            <constraint firstItem="UEL-6B-tnM" firstAttribute="leading" secondItem="Teh-ME-xaQ" secondAttribute="leading" id="fay-Vi-jiS"/>
+                            <constraint firstItem="Fhq-kg-jHI" firstAttribute="centerX" secondItem="nwr-i6-c6R" secondAttribute="centerX" id="lZ4-Ud-XpK"/>
+                            <constraint firstAttribute="bottom" secondItem="UEL-6B-tnM" secondAttribute="bottom" id="ngw-Bs-YsM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Teh-ME-xaQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="capacityLbl" destination="4Bm-lf-q0k" id="vB8-ps-0Kr"/>
+                        <outlet property="costLbl" destination="5Nt-Ma-mK2" id="Tcf-el-YYA"/>
+                        <outlet property="crewLbl" destination="25d-Fm-bF4" id="Qvl-KP-nMk"/>
+                        <outlet property="lengthLbl" destination="pb2-je-TZS" id="CFB-Mq-aIa"/>
+                        <outlet property="makerLbl" destination="mQP-k0-iEA" id="SCX-sm-ShF"/>
+                        <outlet property="modelLbl" destination="d6O-fK-z5D" id="SN4-y4-MMV"/>
+                        <outlet property="nameLbl" destination="R8W-zc-7b4" id="lMu-HL-U55"/>
+                        <outlet property="nextBtn" destination="maf-Ds-sPH" id="hhq-lX-foY"/>
+                        <outlet property="previousBtn" destination="JHd-Ax-R8v" id="5O2-D2-kNY"/>
+                        <outlet property="pxLbl" destination="3Qo-O9-kLQ" id="CsJ-dp-hkZ"/>
+                        <outlet property="ratingLbl" destination="v9M-Y8-NMF" id="e4S-nn-BA5"/>
+                        <outlet property="speedLbl" destination="DBf-FA-xBX" id="XCh-9S-BIJ"/>
+                        <outlet property="spinner" destination="Fhq-kg-jHI" id="Oi5-MH-Fxe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZhW-GS-1mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2848" y="254"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RPa-3d-dn7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aos-0J-u1i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t01-1B-onY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="htE-CR-EFV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Id8-H4-L3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="119"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="films" width="50" height="50"/>
+        <image name="homeworld" width="460" height="864"/>
+        <image name="homeworld_icon" width="50" height="50"/>
+        <image name="space1" width="699" height="1120"/>
+        <image name="space2" width="329" height="610"/>
+        <image name="space3" width="470" height="877"/>
+        <image name="space4" width="278" height="488"/>
+        <image name="starships" width="50" height="50"/>
+        <image name="vehicles" width="50" height="50"/>
+    </resources>
 </document>
